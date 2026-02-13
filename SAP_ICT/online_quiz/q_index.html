@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riddle Master | Fun Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div id="quiz-card" class="card">
+            <div class="quiz-emoji">🤔</div> 
+
+            <header>
+                <h1 class="fun-title">Riddle Master</h1>
+                <div id="progress-bar-container">
+                    <div id="progress-bar"></div>
+                </div>
+            </header>
+
+            <div id="quiz-body">
+                <div class="question-box">
+                    <h2 id="question-text">Loading the first riddle...</h2>
+                </div>
+                <div id="options-container" class="options-grid">
+                    </div>
+            </div>
+
+            <div id="result-body" class="hidden">
+                <h2 class="fun-title">Game Over!</h2>
+                <p>Your Riddle Master Score:</p>
+                <div id="score-display">0/0</div>
+                
+                <div id="review-section" class="review-box"></div>
+            
+                <button onclick="location.reload()" class="btn-restart">Try Again</button>
+            </div>
+
+            <footer>
+                <p id="question-counter">Question 1 of 7</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

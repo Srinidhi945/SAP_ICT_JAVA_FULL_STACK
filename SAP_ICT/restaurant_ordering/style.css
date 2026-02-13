@@ -1,0 +1,55 @@
+body {
+  background: linear-gradient(to right, #fdfbfb, #d9a7fa);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+  background: linear-gradient(to right, #ffdd57, #ff9f43);
+}
+
+.navbar-brand img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.menu-card {
+  transition: transform 0.2s ease-in-out;
+  border: 2px solid #f39c12;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.menu-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+}
+
+.menu-card img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-bottom: 2px solid #f39c12;
+}
+
+#cart {
+  background: #fff8e1;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #ff7043;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+}
+
+#cart-items li {
+  font-size: 16px;
+  background: #ffe0b2;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+footer {
+  background: #222;
+  color: #fff;
+  font-size: 14px;
+}

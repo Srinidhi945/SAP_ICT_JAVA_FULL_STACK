@@ -1,0 +1,86 @@
+:root {
+    --bg-gradient: linear-gradient(135deg, #fffcf5 0%, #f7f3e9 100%);
+    --card-bg: #ffffff;
+    --primary-accent: #4338ca;
+    --accent-hover: #3730a3;
+    --text-main: #334155;
+    --success: #10b981;
+    --danger: #f43f5e;
+    --border: #eaddca;
+    --secondary: #64748b;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+    color: var(--text-main);
+    margin: 0;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.container { max-width: 850px; margin: 0 auto; }
+
+header h1 { font-weight: 700; color: #4b443a; margin-bottom: 8px; }
+header p { color: #8c8579; margin-bottom: 40px; }
+
+.form-card {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.input-group { display: flex; gap: 12px; margin-bottom: 15px; }
+
+input {
+    flex: 1;
+    padding: 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background-color: #fafaf9;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-accent);
+    box-shadow: 0 0 0 3px rgba(67, 56, 202, 0.1);
+}
+
+.btn-primary {
+    background: var(--primary-accent);
+    color: white; border: none; padding: 14px 28px;
+    border-radius: 10px; cursor: pointer; font-weight: 600;
+}
+
+.download-actions { display: flex; gap: 10px; }
+
+.btn-secondary {
+    background: var(--secondary);
+    color: white; border: none; padding: 8px 16px;
+    border-radius: 8px; cursor: pointer; font-size: 0.85rem;
+}
+
+/* Table Design */
+.table-container { background: white; border-radius: 16px; overflow: hidden; border: 1px solid var(--border); }
+table { width: 100%; border-collapse: collapse; }
+th { background-color: #fdfbf7; color: #716b5f; padding: 18px; text-align: left; border-bottom: 2px solid var(--border); }
+td { padding: 18px; border-bottom: 1px solid #f3f0ea; }
+
+.status-pass { color: var(--success); font-weight: bold; }
+.status-fail { color: var(--danger); font-weight: bold; }
+
+.btn-edit {
+    background: #f59e0b; color: white; border: none;
+    padding: 5px 12px; border-radius: 6px; cursor: pointer;
+}
+
+/* Print Optimization */
+@media print {
+    .form-card, .btn-edit, header p { display: none; }
+    body { padding: 0; background: white; }
+    .table-container { border: none; box-shadow: none; }
+}

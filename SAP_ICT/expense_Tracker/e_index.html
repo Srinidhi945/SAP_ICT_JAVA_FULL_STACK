@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">💰 Expense Tracker</a>
+    </div>
+  </nav>
+
+  <!-- Salary Input -->
+  <div class="container my-4" id="salary-section">
+    <div class="card shadow">
+      <div class="card-body">
+        <h4 class="card-title text-center mb-3">Enter Your Salary</h4>
+        <form id="salary-form">
+          <div class="mb-3">
+            <input type="number" id="salary" class="form-control" placeholder="Enter monthly salary" required>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Save Salary</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Transaction Form (hidden until salary entered) -->
+  <div class="container my-4 d-none" id="transaction-section">
+    <div class="card shadow">
+      <div class="card-body">
+        <h4 class="card-title text-center mb-3">Add Transaction</h4>
+        <form id="transaction-form">
+          <div class="mb-3">
+            <input type="text" id="description" class="form-control" placeholder="Enter description" required>
+          </div>
+          <div class="mb-3">
+            <input type="number" id="amount" class="form-control" placeholder="Enter amount" required>
+          </div>
+          <div class="mb-3">
+            <select id="type" class="form-select" required>
+              <option value="income">Income</option>
+              <option value="expense">Expense</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-success w-100">Add</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Balance Section (single block) -->
+  <div class="container my-4 text-center d-none" id="balance-section">
+    <h2 class="text-info">Balance: ₹<span id="balance">0</span></h2>
+    <div class="row mt-3">
+      <div class="col-md-6">
+        <h4 class="text-success">Income: ₹<span id="income">0</span></h4>
+      </div>
+      <div class="col-md-6">
+        <h4 class="text-danger">Expense: ₹<span id="expense">0</span></h4>
+      </div>
+    </div>
+
+    <!-- Download buttons -->
+    <button class="btn btn-primary mt-3" onclick="downloadCSV()">⬇️ Download CSV</button>
+    <button class="btn btn-warning mt-3" onclick="downloadPDF()">⬇️ Download PDF</button>
+  </div>
+
+  <!-- Transaction History -->
+  <div class="container my-4 d-none" id="history-section">
+    <h4 class="text-center mb-3">📜 Transaction History</h4>
+    <ul id="transaction-list" class="list-group"></ul>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <p class="mb-0">© 2026 Expense Tracker</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

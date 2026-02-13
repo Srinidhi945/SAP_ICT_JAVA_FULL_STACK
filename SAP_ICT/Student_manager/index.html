@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GradeFlow | Student Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Student Management System</h1>
+            <p>Enter details to calculate grades and store records</p>
+        </header>
+
+        <section class="form-card">
+            <input type="hidden" id="editIndex" value="-1">
+            
+            <div class="input-group">
+                <input type="text" id="studentName" placeholder="Student Name">
+                <input type="number" id="studentScore" placeholder="Score (0-100)" min="0" max="100">
+                <button id="submitBtn" onclick="addOrUpdateStudent()" class="btn-primary">Add Record</button>
+            </div>
+
+            <div class="download-actions">
+                <button onclick="downloadCSV()" class="btn-secondary">Download CSV</button>
+                <button onclick="downloadPDF()" class="btn-secondary">Download PDF</button>
+            </div>
+        </section>
+
+        <section class="table-container">
+            <table id="studentTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Score</th>
+                        <th>Grade</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="studentList">
+                    </tbody>
+            </table>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
